@@ -7,6 +7,18 @@ request = requests.get(url)
 
 content = request.json()
 
+# print(content.keys())
+# print(content["articles"][0].keys())
+# print(content["articles"][0]["title"])
+# print(content["articles"][0]["description"])
+# print(content["articles"][0]["url"])
+# print(content["articles"][0]["urlToImage"])
+
+for article in content["articles"]:
+    print(article["title"])
+    print(article["description"])
+    print(article["url"])
+    print(article["urlToImage"])
+    print("\n\n")
 
 
-print(content)
